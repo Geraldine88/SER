@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compactable" content="IE=edge">
+    <title>Record and Predict Audio</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        .display-emo {
+            margin: 10% 2%;
+            border: .4rem solid lightgray;
+            border-radius: 1rem;
+            background-color: rgba(250, 250, 210, 0.243);
+        }
+        
+        #text {
+            color: lightslategray;
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .emo {
+            color: #4A83C4;
+            font-size: 1.8rem;
+            font-style: bold;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            padding-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="inner" data-aos="fade-down">
+            <!-----------------Display emotion------------------>
+            <div class="display-emo">
+                <p id="text">Emotion Predicted: </p>
+                <h2 class="emo"> {{ predicted }} </h2>
+            </div>
+
+            <!-----------Navigating Buttons---------------------------->
+            <div style="display:inline-flex" class="buttons">
+
+                <div class="btn1">
+                    <a href="/">
+                        <button class="btn1">
+                                <p>
+                                    Landing Page
+                                </p>
+                            </button>
+                    </a>
+                </div>
+
+                <div class="btn2">
+                    <a href="inputForm.html">
+                        <button class="btn2">
+                            <p>Input Audio</p>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="btn1">
+                    <a href="record_pred.html">
+                        <button class="btn">
+                            <p>
+                                Record
+                            </p>
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../static/aos-master/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 400,
+                duration: 1200
+            });
+        </script>
+    </main>
+</body>
+
+</html>
